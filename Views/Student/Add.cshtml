@@ -1,0 +1,23 @@
+@model VM.Student
+
+
+@if (Model.IsAdded)
+{
+    <h4>Student : @Model.Name @Model.LastName added succesfully</h4>
+}
+<h1>Add Student</h1>
+<form action="/Student/Add" method="post">
+    <label for="Name"> Name : </label>
+    <input type="text" asp-for="Name" placeholder="Name" required>
+    <label for="LastName">Last Name : </label>
+    <input type="text" asp-for="LastName" placeholder="Last Name" required>
+    <label for="Email">E-Mail : </label>
+    <input type="email" asp-for="Email" placeholder="Email" required>
+    <label for="Phone">Phone : </label>
+    <input type="number" asp-for="Phone" placeholder="Phone" required>
+    <label for="CitizenshipId">Citizenship ID : </label>
+    <input type="number" asp-for="CitizenshipId" placeholder="Citizenship ID" required>
+    <label for="BirthDate">Birth Date : </label>
+    <input type="date" asp-for="BirthDate" required>
+    <input type="submit" value="Save Student">
+</form>

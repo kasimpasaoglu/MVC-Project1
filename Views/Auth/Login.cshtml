@@ -1,0 +1,28 @@
+@model VM.Login
+<h1>LOGIN PAGE</h1>
+
+
+@if (Model.IsLoggedIn)
+{
+    <h2> Hello @Model.UserName</h2>
+    <form action="/Auth/Logout" method="post">
+    <input type="submit" value="Logout">
+</form>
+}
+else
+{
+    @if (string.IsNullOrEmpty(Model.UserName))
+    {
+        <h2>Kullanici Adi ve Ya Sifre Hatali</h2>
+    }
+
+    <div class="flex flex-col gap-5 justify-center items-center">
+    <form action="/Auth/Login" method="post">
+        <input type="text" name="UserName" class="p-3" placeholder="Enter Your UserName">
+        <input type="password" name="Password" class="p-3" placeholder="Enter Your Password">
+        <input type="checkbox" asp-for="RememberMe" id="RememberMe">
+        <label for="RememberMe">Remember Me</label>
+        <input type="submit" value="Login">
+    </form>
+</div>
+}

@@ -1,0 +1,22 @@
+@model VM.Login
+<div class="flex flex-col gap-5 justify-center items-center">
+
+    <h1>Sign-In Page</h1>
+
+    @if (!string.IsNullOrWhiteSpace(Model.UserName))
+    {
+        @if (Model.IsSaved)
+        {
+            <h4>User Saved</h4>
+        }
+        else
+        {
+            <h4>This username already exists</h4>
+        }
+    }
+    <form action="/Auth/SignIn" method="post">
+        <input type="text" name="UserName" class="p-3" placeholder="Enter Your UserName">
+        <input type="password" name="Password" class="p-3" placeholder="Enter Your Password">
+        <input type="submit" value="Save User">
+    </form>
+</div>
