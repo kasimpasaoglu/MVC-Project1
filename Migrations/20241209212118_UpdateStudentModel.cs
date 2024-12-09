@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MVC_Project1.Migrations
 {
     /// <inheritdoc />
-    public partial class initialMig : Migration
+    public partial class UpdateStudentModel : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

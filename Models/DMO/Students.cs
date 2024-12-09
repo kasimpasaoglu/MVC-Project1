@@ -10,16 +10,9 @@ namespace DMO
         required public string CitizenshipId { get; set; }
         required public DateOnly BirthDate { get; set; }
         required public DateTime RegDate { get; set; }
-        public Student(string name, string lastName, string email, string phone, string citizenshipId, DateOnly birthDate)
+        public Student()
         {
-            Name = name;
-            LastName = lastName;
-            Email = email;
-            Phone = phone;
-            CitizenshipId = citizenshipId;
-            BirthDate = birthDate;
             RegDate = DateTime.Now;
         }
-        public Student() { }
     }
 }

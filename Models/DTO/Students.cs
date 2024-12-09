@@ -9,6 +9,6 @@ namespace DTO
         required public string Phone { get; set; }
         required public string CitizenshipId { get; set; }
         required public DateOnly BirthDate { get; set; }
-        required public DateTime RegDate { get; set; }
+
     }
 }
