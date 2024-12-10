@@ -9,12 +9,14 @@ namespace VM
         public string Phone { get; set; }
         public string CitizenshipId { get; set; }
         public DateOnly BirthDate { get; set; }
+        public DateTime RegDate { get; set; }
+        public string ErrorMessage { get; set; }
         public bool IsAdded { get; set; }
-        // public User User { get; set; }
+        public bool IsRemoved { get; set; }
+        public Student()
+        {
+            RegDate = DateTime.Now;
+        }
+
     }
-    //     public class User
-    //     {
-    //         public bool IsLoggedIn { get; set; }
-    //         public bool IsAdmin { get; set; }
-    //     }
 }

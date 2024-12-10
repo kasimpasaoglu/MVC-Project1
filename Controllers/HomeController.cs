@@ -1,22 +1,22 @@
-using System.Diagnostics;
-using AutoMapper;
-using Database;
-using DMO;
+
 using Microsoft.AspNetCore.Mvc;
+using VM;
 
 namespace MVC_Project1.Controllers;
 
 public class HomeController : Controller
 {
-
-    private IMapper _mapper;
-    public HomeController(IMapper mapper)
-    {
-
-        _mapper = mapper;
-    }
     public IActionResult Index()
     {
-        return View();
+        string jsonLogin = CookieHelper.GetCookie(Request, "LoginData");
+        if (jsonLogin != null)
+        {
+            Login model = CookieHelper.ToModel<Login>(jsonLogin);
+            return View(model);
+        }
+        else
+        {
+            return View(new Login());
+        }
     }
 }
