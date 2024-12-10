@@ -5,28 +5,28 @@
     <table class="w-full text-center border border-collapse table-auto border-navyBlue">
         <thead>
             <tr class="bg-navyBlue text-aqua">
-                <th class="p-2 border border-gray-500">ID</th>
-                <th class="p-2 border border-gray-500">NAME</th>
-                <th class="p-2 border border-gray-500">LASTNAME</th>
-                <th class="p-2 border border-gray-500">EMAIL</th>
-                <th class="p-2 border border-gray-500">PHONE</th>
-                <th class="p-2 border border-gray-500">CITIZENSHIP ID</th>
-                <th class="p-2 border border-gray-500">BIRTH DATE</th>
-                <th class="p-2 border border-gray-500">REGISTRATION DATE</th>
+                <th class="p-2 border border-navyBlue">ID</th>
+                <th class="p-2 border border-navyBlue">NAME</th>
+                <th class="p-2 border border-navyBlue">LASTNAME</th>
+                <th class="p-2 border border-navyBlue">EMAIL</th>
+                <th class="p-2 border border-navyBlue">PHONE</th>
+                <th class="p-2 border border-navyBlue">CITIZENSHIP ID</th>
+                <th class="p-2 border border-navyBlue">BIRTH DATE</th>
+                <th class="p-2 border border-navyBlue">REGISTRATION DATE</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var student in Model)
             {
                 <tr>
-                    <td class="p-2 border border-gray-500">@student.Id</td>
-                    <td class="p-2 border border-gray-500">@student.Name</td>
-                    <td class="p-2 border border-gray-500">@student.LastName</td>
-                    <td class="p-2 border border-gray-500">@student.Email</td>
-                    <td class="p-2 border border-gray-500">@student.Phone</td>
-                    <td class="p-2 border border-gray-500">@student.CitizenshipId</td>
-                    <td class="p-2 border border-gray-500">@student.BirthDate.ToShortDateString()</td>
-                    <td class="p-2 border border-gray-500">@student.RegDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td class="p-2 border border-navyBlue">@student.Id</td>
+                    <td class="p-2 border border-navyBlue">@student.Name</td>
+                    <td class="p-2 border border-navyBlue">@student.LastName</td>
+                    <td class="p-2 border border-navyBlue">@student.Email</td>
+                    <td class="p-2 border border-navyBlue">@student.Phone</td>
+                    <td class="p-2 border border-navyBlue">@student.CitizenshipId</td>
+                    <td class="p-2 border border-navyBlue">@student.BirthDate.ToShortDateString()</td>
+                    <td class="p-2 border border-navyBlue">@student.RegDate.ToString("yyyy-MM-dd HH:mm")</td>
                 </tr>
             }
         </tbody>
